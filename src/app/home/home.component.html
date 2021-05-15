@@ -14,6 +14,18 @@
           (keyup)="onSearchChange()"
         />
       </mat-form-field>
+      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'"
+        >Available</mat-checkbox
+      >
+      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'"
+        >Available</mat-checkbox
+      >
+      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'"
+        >Available</mat-checkbox
+      >
+      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'"
+        >Available</mat-checkbox
+      >
     </div>
     <div class="items-list">
       <mat-card *ngFor="let product of products" class="product-card">
@@ -39,6 +51,13 @@
           <button mat-button>Buy</button>
         </mat-card-actions>
       </mat-card>
+      <mat-paginator
+        [length]="100"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        class="product-paginator"
+      >
+      </mat-paginator>
     </div>
   </div>
 </div>

@@ -12,6 +12,14 @@ body {
   background-color: rgba(95, 95, 95, 0.233);
 }
 
+::-webkit-scrollbar-button {
+  background-color: rgba(95, 95, 95, 0.533);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(95, 95, 95, 0.833);
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;

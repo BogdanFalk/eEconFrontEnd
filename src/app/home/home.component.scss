@@ -1,28 +1,36 @@
 .home-container {
   height: 84vh;
-  padding-top: 8vh;
-  z-index: 1;
-  // padding-bottom: 8vh;
+
   .product-container {
     box-sizing: border-box;
 
     height: 100%;
-    padding: 0px 100px;
+    padding: 30px 100px;
   }
 }
 
 .search-container {
-  position: fixed;
-  padding-top: 5px;
-  background-color: white;
-  width: 95vw;
-  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   .search-from-field {
     width: 200px;
     .search-form-field-label {
       font-size: 20px;
     }
   }
+  .search-filter {
+    margin-left: 15px;
+  }
+
+  .checkbox-filter {
+    font-size: 18px;
+  }
+}
+
+mat-checkbox::ng-deep.mat-checkbox-inner-container {
+  width: 20px;
+  height: 20px;
 }
 
 input {
@@ -38,7 +46,7 @@ input {
 .items-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: 20px;
   max-height: 70vh;
   z-index: 1;
   // overflow-y: hidden;
@@ -62,4 +70,9 @@ mat-card {
     display: flex;
     justify-content: center;
   }
+}
+
+.product-paginator {
+  width: 100vw;
+  font-size: 16px;
 }
