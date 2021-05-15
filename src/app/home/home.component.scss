@@ -1,3 +1,5 @@
+$filter-font-size: 16px;
+
 .home-container {
   height: 84vh;
 
@@ -21,10 +23,14 @@
   }
   .search-filter {
     margin-left: 15px;
+    height: 32px;
   }
 
   .checkbox-filter {
-    font-size: 18px;
+  }
+
+  .pagination-per-page {
+    margin-left: auto;
   }
 }
 
@@ -74,5 +80,10 @@ mat-card {
 
 .product-paginator {
   width: 100vw;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+.filter-text {
+  font-size: $filter-font-size;
+  margin-bottom: 0px;
 }

@@ -25,6 +25,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+$pagination-color: #673ab7;
+$pagination-hover-color: #573099;
+$pagination-active-bg: #673ab7;
+$pagination-active-border-color: #764ebb;
+$pagination-focus-outline: #764ebb;
+$pagination-focus-box-shadow: 0;
+
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
 $custom-typography: mat-typography-config(
@@ -53,3 +60,6 @@ $custom-typography: mat-typography-config(
 @include angular-material-typography($custom-typography);
 
 @include mat-core($custom-typography);
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";

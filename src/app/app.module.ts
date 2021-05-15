@@ -11,6 +11,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -24,6 +25,7 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
     MatCardModule,
     MatPaginatorModule,
     MatCheckboxModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

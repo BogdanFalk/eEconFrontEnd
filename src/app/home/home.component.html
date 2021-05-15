@@ -14,18 +14,30 @@
           (keyup)="onSearchChange()"
         />
       </mat-form-field>
-      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'"
-        >Available</mat-checkbox
-      >
-      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'"
-        >Available</mat-checkbox
-      >
-      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'"
-        >Available</mat-checkbox
-      >
-      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'"
-        >Available</mat-checkbox
-      >
+      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'">
+        <p class="filter-text">Available</p>
+      </mat-checkbox>
+      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'">
+        <p class="filter-text">Available</p>
+      </mat-checkbox>
+      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'">
+        <p class="filter-text">Available</p>
+      </mat-checkbox>
+      <mat-checkbox class="search-filter checkbox-filter" [color]="'primary'">
+        <p class="filter-text">Available</p>
+      </mat-checkbox>
+      <div class="search-filter pagination-per-page">
+        <p class="filter-text">
+          View
+          <select ng-model="viewby" ng-change="setItemsPerPage(viewby)">
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+          </select>
+          records at a time.
+        </p>
+      </div>
     </div>
     <div class="items-list">
       <mat-card *ngFor="let product of products" class="product-card">
@@ -51,13 +63,14 @@
           <button mat-button>Buy</button>
         </mat-card-actions>
       </mat-card>
-      <mat-paginator
-        [length]="100"
-        [pageSize]="10"
-        [pageSizeOptions]="[5, 10, 25, 100]"
-        class="product-paginator"
-      >
-      </mat-paginator>
+      <ngb-pagination
+        [collectionSize]="120"
+        [(page)]="page"
+        [maxSize]="3"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        class="product-paginator d-flex justify-content-center"
+      ></ngb-pagination>
     </div>
   </div>
 </div>
